@@ -1,0 +1,30 @@
+Notes for JavaFX:
+
+Main Window is called stage. 
+On the stage, you can set it to a specific scene to view.
+Scenes require a layout (StackPane, VBox, HBox).
+Use the layout to add elements onto the Scene it is a part of using getChildren().
+
+It is possible to style each scene using CSS
+
+For animations, use transitions
+	IE:
+		use to move entities
+		TranslateTransition t = new TranslateTransition();
+		t.setDuration(Duration.seconds(1));
+		t.setNode(b);
+		t.setToY(500-b.getHeight());
+		t.setToX(500-b.getWidth());
+		t.setAutoReverse(true);
+		t.setCycleCount(4);
+		t.play();
+		
+		t.setOnFinished(e -> System.out.println("wow"));
+		
+Notes for game:
+going to use circles for enemies, change color and size when below a certain amount of health
+maybe give enemies a variety of colors based on rng
+tower upgrades:::
+work on game over;
+add upgrade and property menu for towers when they are clicked
+change -fx-whatever into cs form if possible;
